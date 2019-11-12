@@ -1,0 +1,43 @@
+<%= form_with(model: [:backend, @product]) do |f| %>
+    <div>
+      <%= f.label :title, 'Nombre' %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div>
+      <%= f.label :description, 'Descripcion' %>
+      <%= f.text_area :description %>
+    </div>
+
+    <div>
+      <%= f.label :prod_id, 'Codigo' %>
+      <%= f.text_field :prod_id %>
+    </div>
+
+    <div>
+      <%= f.label :price, 'Precio' %>
+      <%= f.text_field :price %>
+    </div>
+
+    <div>
+      <%= f.label :cost, 'Costo' %>
+      <%= f.text_field :cost %>
+    </div>
+    
+    <div>
+      <%= f.label :active, 'Activo' %>
+      <%= f.text_field :active %>
+    </div>
+
+    <div>
+      <%= f.label :category, 'Categoris' %>
+      <%= f.text_field :category %>
+    </div>
+
+    <div>
+      <%= f.label :tag, 'Etiqueta' %>
+      <%= f.text_field :tag %>
+    </div>
+
+    <%= f.submit 'Guardar' %>
+  <% end %>

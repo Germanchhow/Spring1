@@ -1,0 +1,13 @@
+<h1>Publicacion #<%= @category.id %></h1>
+<div class='card'>
+  <div class='card-body'>
+    <div class="mb-3">
+      <b>Título</b><br/>
+      <%= @category.name %>
+    </div>
+  </div>
+
+  <div class='card-footer'>
+    <%= link_to 'Volver', categorys_path, class: 'btn btn-outline-secondary' %>
+  </div>
+</div>

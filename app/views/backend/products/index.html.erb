@@ -1,0 +1,18 @@
+<h1 class='mt-2'>Productos</h1>
+
+<%= render 'filter' %>
+
+<table class="table table-bordered">
+  <thead class="thead-light">
+  <tr>
+  <th>Nombre</th>
+  <th>Productos</th>
+  <th class='text-right'><%= link_to 'Nuevo', new_backend_product_path, class: 'btn btn-primary' %></th>
+</tr>
+  </thead>
+  <tbody id='products'>
+    <%= render @presenter.products %>
+  </tbody>
+</table>
+
+<%= will_paginate @presenter.products %>
