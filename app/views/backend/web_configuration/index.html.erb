@@ -1,0 +1,9 @@
+<h1>config web</h1>
+<%= @logo.name%>
+if FileTest.exist?(<%=@logo.Imagen_Logo %>)
+  <%= image_tag @logo.Imagen_Logo %>
+  <%= link_to 'Cambiar', edit_backend_logo_url, class: 'btn btn-outline-secondary'  %>
+else
+  No hay logo porfavor asignarlo
+  <%= link_to 'Asignar', new_backend_logo_url, class: 'btn btn-outline-secondary'  %>
+end

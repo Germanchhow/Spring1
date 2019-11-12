@@ -1,0 +1,30 @@
+<%= render 'flash_message' %>
+
+<%= form_with model: @user, local: true do |user| %>
+<div class='card'>
+  <div class='card-body'>
+
+    <div class="form-group">
+      <%= user.label :username, 'Usuario' %>
+      <%= user.text_area :username, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= user.label :email, 'Email'%>
+      <%= user.text_area :email, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= user.label :password, 'Contraseña'%>
+      <%= user.password_field :password, class: 'form-control'%>
+    </div>
+     <div class="form-group">
+      <%= user.label :password, 'Repetir contraseña'%>
+      <%= user.password_field :password_confirmation, class: 'form-control'%>
+    </div>
+
+  <div class='card-footer'>
+    <%= link_to 'Volver', backend_users_url, class: 'btn btn-outline-secondary' %>
+    <%= user.submit 'Guardar', class: 'btn btn-primary' %>
+  </div>
+</div>
+
+<% end %>

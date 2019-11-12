@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProyectoSnap</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'backend', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'backend', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>   
+    <div class="d-flex" id="wrapper">
+      <%= render 'sidebar' %>
+
+    <div id="page-content-wrapper">
+      <%= render 'navbar' %>
+
+    <%if user_signed_in?%>
+      Gracias por entrar al BACKEND
+    <% else %>
+      Logueate ctm
+    <% end %>
+
+    (<%= controller_name %> <%= action_name %>)
+    <%= yield %>
+      <p class="notice"><%= notice %> </p>
+      <p class="alert"><%= alert %> </p>
+  </body>
+</html>

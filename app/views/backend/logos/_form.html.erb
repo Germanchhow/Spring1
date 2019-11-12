@@ -1,0 +1,17 @@
+<%= render 'flash_message' %>
+
+<%= form_with model: @logo, local: true do |logo| %>
+  <div class='card'>
+    <div class='card-body'>
+      <div class="form-group">
+        <%= logo.label :ImagenLogo, 'Logo' %>
+        <%= logo.file_field :ImagenLogo, class: 'form-control' %>
+      </div>
+    </div>
+  <div class='card-footer'>
+    <%= link_to 'Volver', backend_web_configuration_index_url, class: 'btn btn-outline-secondary' %>
+    <%= logo.submit 'Guardar', class: 'btn btn-primary' %>
+  </div>
+</div>
+
+<% end %>

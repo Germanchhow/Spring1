@@ -1,0 +1,11 @@
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th>Email de usuario</th>
+      <th class='text-right'><%= link_to 'Nuevo usuario', new_backend_user_url, class: 'btn btn-primary' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @users %>
+  </tbody>
+</table>
