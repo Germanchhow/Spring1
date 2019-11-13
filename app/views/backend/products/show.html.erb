@@ -1,22 +1,30 @@
-<h1>Publicacion #<%= @product.id %></h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/backend">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="/backend/products">Productos</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= @product.title %></li>
+  </ol>
+</nav>
+<h1><%= @product.title %></h1>
 
 <div class='card'>
   <div class='card-body'>
     <div class="mb-3">
-      <b>Título</b><br/>
-      <%= @product.title %>
-    </div>
-    <div class="mb-3">
-      <b>Activo</b><br/>
-      <%= @product.active %>
+      <b>Categoria</b><br/>
+      <%= @product.category_id %>
     </div>
     <div class="mb-3">
       <b>Precio</b><br/>
       <%= @product.price %>
     </div>
-  </div>
+    <div class="mb-3">
+      <b>Descripción</b><br/>
+      <%= @product.description %>
+    </div>
+    <div class="mb-3">
+      <b>Etiquetas</b><br/>
+      <%= @product.tag_id %>
+    </div>
+    </div>
 
-  <div class='card-footer'>
-    <%= link_to 'Volver', backend_products_path, class: 'btn btn-outline-secondary' %>
-  </div>
 </div>

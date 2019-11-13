@@ -1,5 +1,9 @@
-<h1 class='mt-2'>Etiquetas</h1>
-
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/backend">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Etiquetas</li>
+  </ol>
+</nav>
 <%= render 'filter' %>
 
 <table class="table table-bordered">
@@ -7,7 +11,7 @@
   <tr>
   <th>Nombre</th>
   <th>Etiquetas</th>
-  <th class='text-right'><%= link_to 'Nueva', new_backend_tag_path, class: 'btn btn-primary' %></th>
+  <th class='text-right'><%= link_to 'Nueva Etiqueta', new_backend_tag_path, class: "btn btn-dark" %></button>
 </tr>
   </thead>
   <tbody id='tags'>

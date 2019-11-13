@@ -1,4 +1,9 @@
-<h1 class='mt-2'>Categorias</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/backend">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Categorias</li>
+  </ol>
+</nav>
 
 <%= render 'filter' %>
 
@@ -6,8 +11,8 @@
   <thead class="thead-light">
    <tr>
       <th>Nombre</th>
-      <th>Productos</th>
-      <th class='text-right'><%= link_to 'Nueva', new_backend_category_path, class: 'btn btn-primary' %></th>
+     
+      <th class='text-right'><%= link_to 'Nueva Categoria', new_backend_category_path, class: 'btn btn-dark' %></button>
     </tr>
    
   </thead>

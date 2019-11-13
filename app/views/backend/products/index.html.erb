@@ -1,14 +1,19 @@
-<h1 class='mt-2'>Productos</h1>
-
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/backend">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Productos</li>
+  </ol>
+</nav>
 <%= render 'filter' %>
 
 <table class="table table-bordered">
   <thead class="thead-light">
   <tr>
-  <th>Nombre</th>
-  <th>Productos</th>
-  <th class='text-right'><%= link_to 'Nuevo', new_backend_product_path, class: 'btn btn-primary' %></th>
-</tr>
+  <th>Producto</th>
+  <th>Activo</th>
+  <th>Precio</th>
+  <th class='text-right'><%= link_to 'Nuevo Producto', new_backend_product_path, class: "btn btn-dark" %></button>
+  </tr>
   </thead>
   <tbody id='products'>
     <%= render @presenter.products %>

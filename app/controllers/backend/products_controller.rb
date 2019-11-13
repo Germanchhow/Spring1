@@ -20,7 +20,7 @@ module Backend
    end
  
    def create
-     @product = Post.new(product_params)
+     @product = Product.new(product_params)
      @product.save(product_params)
      redirect_to backend_product_path(@product)
    end
@@ -40,7 +40,7 @@ module Backend
   private
 
   def product_params
-    params.require(:product).permit(:title, :prod_id, :description, :price, :cost, :active, category_id: [])
+    params.require(:product).permit(:title, :prod_id, :description, :price, :cost, :active, :category_id, :tag_id [])
   end
 
   end
